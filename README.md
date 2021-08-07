@@ -1,2 +1,2 @@
 # FLP
-Repositorio del Curso FLP de la UTA Arica-Chile
+Repositorio del Curso FLP de la carrera ICCI UTA Arica-Chile
