@@ -1,18 +1,17 @@
-def bordesp(l):
+def bordes1(l):
     return [1] + l + [1]
 
-def sumap(l):
-    return [i+j for i,j in zip(l[:-1],l[1:])]
+def elementop(e):
+    return bordes1([i+j for i,j in zip(e[1:],e[:-1])])
 
 def nivelp(l):
-    return bordesp(sumap(l[-1]))
+    return l + [elementop(l[-1])]
 
 def pascal(n):
     if n == 1:
         return [[1]]
     else:
-        pas = pascal(n-1)       # me permito una impureza por razones de eficiencia 
-        return pas + [nivelp(pas)]
+        return nivelp(pascal(n-1))
 
 def triangulo(l):
     if l:
